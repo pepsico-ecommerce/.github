@@ -9,3 +9,4 @@ on:
 jobs:
   docker-build:
     uses: pepsico-ecommerce/global_workflows_poc/.github/workflows/docker-build.yaml@main
+  secrets: inherit
