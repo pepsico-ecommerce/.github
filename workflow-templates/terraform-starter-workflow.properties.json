@@ -1,0 +1,10 @@
+{
+    "name": "Docker Build Starter Workflow",
+    "description": "Docker Build Starter workflow.",
+    "categories": [
+        "Docker"
+    ],
+    "filePatterns": [
+        "^Dockerfile"
+    ]
+}

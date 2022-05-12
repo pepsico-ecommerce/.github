@@ -1,0 +1,19 @@
+name: Terraform Workflow
+
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [ main, master ]
+
+jobs:
+  terraform-lint:
+    if: github.event_name == 'push'
+    uses:  pepsico-ecommerce/global_workflows_poc/.github/workflows/terraform-reusable-workflow-lint.yaml@main
+    secrets: inherit
+
+  terraform-plan:
+    if: github.event_name == 'pull_request'
+    uses:  pepsico-ecommerce/global_workflows_poc/.github/workflows/terraform-reusable-workflow-plan.yaml@main
+    secrets: inherit
